@@ -3,14 +3,24 @@
 	src: url('../fonts/RFDewiExpanded-Bold.ttf');
 }
 
-body {
+body,html {
+    width: 100vw;
+    height: 100vh;
     margin: 0px;
     background: rgb(255, 255, 255);
 }
 input:focus {
     outline: none;
-  }
+}
+@media screen and (max-width:960px){
+    header ul {
+        display: none;
+    }
+}
+@media screen and (min-width:960px){
 
+}
+    
 header {
     width: 100vw;
     height: 80px;
@@ -69,19 +79,17 @@ header ul {
 
 .top_image {
     width: 100%;
-    margin: 0px;
+    margin: 0;
 }
 .top_title {
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 500;
-    font-size: 48px;
+    font-size: calc(2.5rem + ((1vw - 4.8px) * 0.5556));
     line-height: 70px;
     text-align: center;
     width: 100vw;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    margin: 16px 0px 0px;
+    margin: 20px 0px 0px;
+
 }
 
 .second_view {
@@ -92,6 +100,7 @@ header ul {
     margin: 250px 0px 0px;
 }
 .center_div {
+    width: 90vw;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -100,7 +109,7 @@ header ul {
 .second_view_text {
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 500;
-    font-size: 36px;
+    font-size: calc(1.4375rem + ((1vw - 4.8px) * 0.9028));
     line-height: 54px;
     letter-spacing: 1px;
     margin: 0px;
@@ -108,6 +117,7 @@ header ul {
 .mail_input_div {
     width: 476px;
     height: 54px;
+    max-width: 80vw;
     position: relative;
     margin: 74px auto 170px;
     background: rgb(250, 250, 250);
@@ -161,12 +171,13 @@ header ul {
 }
 
 .scroll_text_view {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
+    margin-bottom: 180px;
 }
 .scroll_view {
-    width: 100vw;
-    font-size: 200px;
+    width: 100%;
+    font-size: calc(4.375rem + ((1vw - 4.8px) * 9.0278));
     font-family: 'RFDewiExpanded', sans-serif;
     white-space: nowrap;
     animation-name: scroll_text;
@@ -175,8 +186,8 @@ header ul {
     animation-iteration-count: infinite;
 }
 .scroll_view1 {
-    width: 100vw;
-    font-size: 200px;
+    width: 100%;
+    font-size: calc(4.375rem + ((1vw - 4.8px) * 9.0278));
     font-family: 'RFDewiExpanded', sans-serif;
     white-space: nowrap;
     color: rgb(255, 255, 255);
@@ -198,64 +209,120 @@ header ul {
 .third_view {
     width: 100vw;
     height: auto;
-    margin: 180px 0px 0px;
+    margin: 0;
+    /* text-align: center; */
 }
-.third_view_image0 {
-    height: 100vh;
+
+
+@media screen and (max-width:1100px){
+    .third_view_image0 {
+        width: 100vw;
+    }
+    .third_view .text_div {
+        width: 80vw;
+        margin: 11.4vw auto;
+        text-align: left;
+        vertical-align: top;
+    }
 }
-.third_view .text_div {
-    width: 30vw;
-    min-width: 500px;
-    float: right;
-    margin: 220px 80px 0px 0px;
+@media screen and (min-width:1100px){
+    .third_view_image0 {
+        width: 50vw;
+        max-width: 100vw;
+        display: inline-block;
+        object-fit: contain;
+    }
+    .third_view .text_div {
+        width: 30vw;
+        min-width: 400px;
+        margin: 11.4vw calc(3.125rem + ((1vw - 4.8px) * 3.4722));
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+    }
 }
 .third_text_0 {
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 500;
-    font-size: 36px;
+    font-size: calc(1.4375rem + ((1vw - 4.8px) * 0.9028));
     line-height: 52px;
 }
 .third_text_1 {
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 24px;
+    font-size: calc(1.25rem + ((1vw - 4.8px) * 0.2778));
     line-height: 35px;
 }
 .fourth_view {
     width: 100vw;
-    height: auto;
     margin: 300px 0px 0px;
     background: rgb(250, 250, 250);
     padding: 80px 0px;
 }
-.fourth_view .text_div {
-    float: left;
-    margin: 300px 180px 0px;
+@media screen and (max-width:1100px){
+    .fourth_view {
+        height: auto;
+        text-align: center;
+    }
+    .fourth_view .text_div {
+        vertical-align: top;
+        max-width: 80vw;
+        margin: 10vw auto 50px;
+        text-align: left;
+    }
+    
+    .fourth_image {
+        width: 60vw;
+        max-height: 80vh;
+        object-fit: contain;
+    }
 }
+@media screen and (min-width:1100px){
+    .fourth_view {
+        height: 45vw;
+    }
+    .fourth_view .text_div {
+        vertical-align: top;
+        margin: 10vw 11.4vw 0px;
+    }
+    
+    .fourth_image {
+        float: right;
+        width: 30vw;
+        margin-right: 50px;
+    }
+}
+
 .fourth_text_0 {
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 500;
-    font-size: 36px;
+    font-size: calc(1.4375rem + ((1vw - 4.8px) * 0.9028));
     line-height: 52px;
 }
 .fourth_text_1 {
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 24px;
+    font-size: calc(1.25rem + ((1vw - 4.8px) * 0.2778));
     line-height: 35px;
-}
-.fourth_image {
-    width: 30vw;
 }
 
 .image_scroll_div {
     width: 100vw;
     height: auto;
     text-align: center;
-    margin: 50px 0px 0px;
+    margin: 0;
 }
-.image_scroll_div img {
-    width: 15vw;
-    display: inline-block;
-    margin: 0px 7vw;
+@media screen and (max-width:1100px){
+    .image_scroll_div img {
+        width: 500px;
+        max-width: 75vw;
+        margin: 100px 5vw;
+    }
+}
+@media screen and (min-width:1100px){
+    .image_scroll_div img {
+        width: 20vw;
+        display: inline-block;
+        margin: 100px 5vw;
+    }
 }
 .how_works_div {
     width: 100vw;
@@ -275,7 +342,7 @@ header ul {
     display: inline-block;
     text-align: center;
     vertical-align: top;
-    margin: 0px 40px;
+    margin: 70px 40px;
 }
 .how_works_div .section img {
     width: 50px;
@@ -314,7 +381,7 @@ header ul {
     font-weight: bold;
     font-size: 48px;
     line-height: 58px;
-    margin-bottom: 140px;
+    margin-bottom: 70px;
 }
 .price_div {
     width: 100vw;
@@ -328,7 +395,7 @@ header ul {
     display: inline-block;
     vertical-align: top;
     background: rgb(250, 250, 250);
-    margin: 0px 16px;
+    margin: 70px 16px;
 }
 .price_plan_title {
     font-family: 'RFDewiExpanded', sans-serif;
