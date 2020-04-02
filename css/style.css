@@ -137,6 +137,7 @@ header ul {
 .mail_input {
     width: 476px;
     height: 54px;
+    max-width: 100%;
     padding-left: 1em;
     text-align: left;
     font-family: "Noto Sans JP", sans-serif;
